@@ -1,0 +1,30 @@
+<!--logs.wxml-->
+<view class="container log-list">
+    <view style="display:flex; padding-left:35px; width: 100%;">
+        <input
+                placeholder="请输入城市"
+                style="border-bottom: 2px solid #E8E8E8;"
+                auto-focus
+                bindinput="onInputChange"
+        />
+        <button
+                style="height: 30px; display:flex; align-items:center; font-size: 14px"
+                bindtap="onClick"
+        >
+            确认
+        </button>
+    </view>
+    <view
+            wx:for="{{data}}"
+            style="margin-top: 20px; width: 100%; display: flex; align-items: center; justify-content: space-between;"
+    >
+        <view>
+            <view>{{item.date}}</view>
+            <view>最高温：{{item.high}}</view>
+            <view>最低温：{{item.low}}</view>
+        </view>
+        <view>
+            {{item.type}}
+        </view>
+    </view>
+</view>

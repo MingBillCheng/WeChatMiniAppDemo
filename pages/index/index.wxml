@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <view wx:for="{{imgArray}}">
+    <image src="{{item.url}}" bindlongtap="previewImage" data-value='{{item.url}}' mode="aspectFit" ></image>
+  </view>
+</view>
