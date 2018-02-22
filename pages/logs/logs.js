@@ -6,7 +6,8 @@ Page({
     logs: [],
     inputValue: '',
     showData: false,
-    data: []
+    data: [],
+    showTemper: false,
   },
   onLoad: function () {
 
@@ -23,7 +24,13 @@ Page({
       },
       success: (res) => {
         console.log(res)
-        this.setData({ showData: true, data: res.data.data.forecast })
+        this.setData({
+          showData: true,
+          data: res.data.data.forecast,
+          temper: res.data.data.wendu,
+          showTemper: true,
+          city: res.data.data.city
+        })
       }
     })
   }

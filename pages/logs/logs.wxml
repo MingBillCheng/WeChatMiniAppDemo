@@ -14,9 +14,15 @@
             确认
         </button>
     </view>
+    <view wx:if="{{showTemper}}" style="margin-top: 20rpx">
+        {{city}}市
+    </view>
+    <view wx:if="{{showTemper}}" style="font-size: 80rpx; font-weight: bold; margin-top: 20rpx">
+        {{ temper }}℃
+    </view>
     <view
             wx:for="{{data}}"
-            style="margin-top: 20px; width: 100%; display: flex; align-items: center; justify-content: space-between;"
+            style="margin-top: 20px; width: 100%; display: flex; align-items: center; justify-content: space-between; font-size: 30rpx"
     >
         <view>
             <view>{{item.date}}</view>
